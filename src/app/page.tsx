@@ -36,7 +36,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+    const handleBeforeUnload = (event: Event) => {
       if (loggedInUser) {
         setOnlineUsers((prev) => prev.filter((user) => user !== loggedInUser));
       }
